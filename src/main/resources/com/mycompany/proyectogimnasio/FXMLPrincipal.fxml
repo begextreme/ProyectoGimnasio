@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1046.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyectogimnasio.FXMLPrincipalController">
+   <children>
+      <Pane layoutX="23.0" layoutY="24.0" prefHeight="682.0" prefWidth="300.0" style="-fx-border-color: grey;">
+         <children>
+            <Label layoutX="54.0" layoutY="23.0" text="id:" />
+            <Label layoutX="24.0" layoutY="59.0" text="Nombre:" />
+            <Label layoutX="24.0" layoutY="92.0" text="Apellido:" />
+            <Label layoutX="46.0" layoutY="126.0" text="Sexo:" />
+            <Label layoutX="17.0" layoutY="187.0" text="FechaPago:" />
+            <TextField fx:id="txtid" layoutX="127.0" layoutY="19.0" />
+            <TextField fx:id="txtnombre" layoutX="127.0" layoutY="55.0" />
+            <TextField fx:id="txtapellido" layoutX="127.0" layoutY="88.0" />
+            <ComboBox fx:id="cbsexo" layoutX="126.0" layoutY="122.0" prefWidth="150.0" />
+            <DatePicker fx:id="datefechapago" layoutX="127.0" layoutY="183.0" prefHeight="25.0" prefWidth="163.0" />
+            <Pane layoutX="14.0" layoutY="226.0" prefHeight="440.0" prefWidth="276.0" style="-fx-border-color: grey;">
+               <children>
+                  <Label layoutX="22.0" layoutY="23.0" text="Seleccionar Imagen" />
+                  <Button layoutX="48.0" layoutY="54.0" mnemonicParsing="false" onAction="#abrirSelectorArchivos" prefHeight="25.0" prefWidth="200.0" text="Explorar" />
+                  <Label layoutX="22.0" layoutY="103.0" text="Nombre de la imagen" />
+                  <TextField fx:id="nombreimagen" layoutX="47.0" layoutY="136.0" prefHeight="25.0" prefWidth="200.0" />
+                  <ImageView fx:id="vistaimagen" fitHeight="150.0" fitWidth="200.0" layoutX="47.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button layoutX="19.0" layoutY="359.0" mnemonicParsing="false" onAction="#guardarCliente" text="Guardar" />
+                  <Button layoutX="98.0" layoutY="359.0" mnemonicParsing="false" onAction="#modificarCliente" text="Modificar" />
+                  <Button layoutX="184.0" layoutY="359.0" mnemonicParsing="false" onAction="#eliminarCliente" prefHeight="25.0" prefWidth="73.0" text="Eliminar" />
+               </children>
+            </Pane>
+            <Label layoutX="46.0" layoutY="157.0" text="Edad:" />
+            <TextField fx:id="txtedad" layoutX="127.0" layoutY="153.0" />
+         </children>
+      </Pane>
+      <TableView fx:id="tablaclientes" layoutX="344.0" layoutY="24.0" onMouseClicked="#seleccionarClientes" prefHeight="682.0" prefWidth="684.0" style="-fx-border-color: grey;" />
+   </children>
+</AnchorPane>
